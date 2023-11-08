@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5d6cca48672de7936e195e5522ac702b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-ripple-effect@1.0.5/dist/ripple.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5d6cca48672de7936e195e5522ac702b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5d6cca48672de7936e195e5522ac702b = L.map(
+                "map_5d6cca48672de7936e195e5522ac702b",
+                {
+                    center: [47.61, -122.3],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11.5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_5d6cca48672de7936e195e5522ac702b);
+
+            
+
+        
+    
+            var tile_layer_0e15b14aa16a567f70d83345094e18d0 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_0e15b14aa16a567f70d83345094e18d0.addTo(map_5d6cca48672de7936e195e5522ac702b);
+    
+            var marker_ca56c01a7c2c3cb97dd68e939dd302b9 = L.marker(
+                [47.614115001, -122.348996039],
+                {"tags": ["Medium Risk", "Office"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_19701b61682e17d4d977b6f7849f86bc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_ca56c01a7c2c3cb97dd68e939dd302b9.setIcon(icon_19701b61682e17d4d977b6f7849f86bc);
+        
+    
+            marker_ca56c01a7c2c3cb97dd68e939dd302b9.bindTooltip(
+                `<div>
+                     Belltown, Office, 87 Wall St, Seattle WA, 98121
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e45eba675c7e1dc849fd81ae9edc941f = L.marker(
+                [47.658919791, -122.309751168],
+                {"tags": ["Critical Risk", "Schools"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_f1cc0b467c540f72b166ffbde6f91694 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "school", "iconColor": "white", "markerColor": "cadetblue", "prefix": "fa"}
+            );
+            marker_e45eba675c7e1dc849fd81ae9edc941f.setIcon(icon_f1cc0b467c540f72b166ffbde6f91694);
+        
+    
+            marker_e45eba675c7e1dc849fd81ae9edc941f.bindTooltip(
+                `<div>
+                     Univ Dist, Schools, 4105 Memorial Way NE, Seattle WA, 98195
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e7ad0964340608221cd6f80ef4c45fa5 = L.marker(
+                [47.613169983, -122.311865968],
+                {"tags": ["Critical Risk", "Schools"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_9c83e12df8ec4fe61b3bf2575bce31eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "school", "iconColor": "white", "markerColor": "cadetblue", "prefix": "fa"}
+            );
+            marker_e7ad0964340608221cd6f80ef4c45fa5.setIcon(icon_9c83e12df8ec4fe61b3bf2575bce31eb);
+        
+    
+            marker_e7ad0964340608221cd6f80ef4c45fa5.bindTooltip(
+                `<div>
+                     Central Area/Squire Park, Schools, 1424 15th Ave, Seattle WA, 98122
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9b0c10a73c0108690e72879e7af8b52c = L.marker(
+                [47.553657003, -122.334820983],
+                {"tags": ["Medium Risk", "Industrial"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_e406fcd24ddf93979576ffdd03e905d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_9b0c10a73c0108690e72879e7af8b52c.setIcon(icon_e406fcd24ddf93979576ffdd03e905d8);
+        
+    
+            marker_9b0c10a73c0108690e72879e7af8b52c.bindTooltip(
+                `<div>
+                     Georgetown, Industrial, 5421 1st Ave S, Seattle WA, 98108
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_203bb70406247c4980952aa6cc8ba29f = L.marker(
+                [47.514670006, -122.25884297],
+                {"tags": ["Critical Risk", "Schools"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_147ff64e90d28ef8c19c2064bcec18a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "school", "iconColor": "white", "markerColor": "cadetblue", "prefix": "fa"}
+            );
+            marker_203bb70406247c4980952aa6cc8ba29f.setIcon(icon_147ff64e90d28ef8c19c2064bcec18a2);
+        
+    
+            marker_203bb70406247c4980952aa6cc8ba29f.bindTooltip(
+                `<div>
+                     Rainier Beach, Schools, 9709 60th Ave S, Seattle WA, 98118
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4637905c26139747c903e78ff42e07b3 = L.marker(
+                [47.681443015, -122.314989987],
+                {"tags": ["Medium Risk", "Government"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_032c27db89b1737db0a02ae712331e5b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "building-columns", "iconColor": "white", "markerColor": "lightgray", "prefix": "fa"}
+            );
+            marker_4637905c26139747c903e78ff42e07b3.setIcon(icon_032c27db89b1737db0a02ae712331e5b);
+        
+    
+            marker_4637905c26139747c903e78ff42e07b3.bindTooltip(
+                `<div>
+                     Ravenna/Bryant, Government, 7200 12th Ave NE, Seattle WA, 98115
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_09640132a005f6194ae181b5246f83dd = L.marker(
+                [47.65400053, -122.303968321],
+                {"tags": ["Medium Risk", "Industrial"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_c4e7a69e4e4ce2cdfaf93bfddd76f2ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_09640132a005f6194ae181b5246f83dd.setIcon(icon_c4e7a69e4e4ce2cdfaf93bfddd76f2ac);
+        
+    
+            marker_09640132a005f6194ae181b5246f83dd.bindTooltip(
+                `<div>
+                     Univ Dist, Industrial, 3900 Jefferson Rd NE, Seattle WA, 98195
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_044cff0231b65be5a3b23847bc6fd79e = L.marker(
+                [47.649627993, -122.362632976],
+                {"tags": ["Critical Risk", "Schools"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_2eb3f6060103353c7d6a369d05680913 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "school", "iconColor": "white", "markerColor": "cadetblue", "prefix": "fa"}
+            );
+            marker_044cff0231b65be5a3b23847bc6fd79e.setIcon(icon_2eb3f6060103353c7d6a369d05680913);
+        
+    
+            marker_044cff0231b65be5a3b23847bc6fd79e.bindTooltip(
+                `<div>
+                     Queen Anne, Schools, 3307 3rd Ave W, Seattle WA, 98119
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cc9580996d7fb1f588c5ea019a1cca97 = L.marker(
+                [47.68378999, -122.262415002],
+                {"tags": ["Medium Risk", "Government"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_fe791f64c7927f1a0ac385ace0881b8d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "building-columns", "iconColor": "white", "markerColor": "lightgray", "prefix": "fa"}
+            );
+            marker_cc9580996d7fb1f588c5ea019a1cca97.setIcon(icon_fe791f64c7927f1a0ac385ace0881b8d);
+        
+    
+            marker_cc9580996d7fb1f588c5ea019a1cca97.bindTooltip(
+                `<div>
+                     Laurelhurst/Sand Point, Government, 7561 63rd Ave NE, Seattle WA, 98115
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_377d02e30c2bea2e176e3b88744cc7f9 = L.marker(
+                [47.657454254, -122.305190944],
+                {"tags": ["Critical Risk", "Schools"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_571a794707a2983ea416c49702341081 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "school", "iconColor": "white", "markerColor": "cadetblue", "prefix": "fa"}
+            );
+            marker_377d02e30c2bea2e176e3b88744cc7f9.setIcon(icon_571a794707a2983ea416c49702341081);
+        
+    
+            marker_377d02e30c2bea2e176e3b88744cc7f9.bindTooltip(
+                `<div>
+                     Univ Dist, Schools, 2103 NE Skagit Ln, Seattle WA, 98195
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6b51fe4634e09028eb6cf37f9326e4f1 = L.marker(
+                [47.684518, -122.363511986],
+                {"tags": ["Medium Risk", "Office"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_a48139693b9e78e0b3a0f836af4a0fd5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_6b51fe4634e09028eb6cf37f9326e4f1.setIcon(icon_a48139693b9e78e0b3a0f836af4a0fd5);
+        
+    
+            marker_6b51fe4634e09028eb6cf37f9326e4f1.bindTooltip(
+                `<div>
+                     Greenwood/Phinney Ridge, Office, 7619 6th Ave NW, Seattle WA, 98117
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_957f68bab961ca55510349ce43ec711a = L.marker(
+                [47.596736004, -122.33369303],
+                {"tags": ["High Risk", "Industrial"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_dce901e939725041a081e4704613ee72 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_957f68bab961ca55510349ce43ec711a.setIcon(icon_dce901e939725041a081e4704613ee72);
+        
+    
+            marker_957f68bab961ca55510349ce43ec711a.bindTooltip(
+                `<div>
+                     Duwamish/SODO, Industrial, 548 1st Ave S, Seattle WA, 98104
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_13af31f96403d8997cb15175da35eca1 = L.marker(
+                [47.60840902, -122.30092398],
+                {"tags": ["Critical Risk", "Schools"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_4138c9d918fed5acfd3ef4fbe091a5a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "school", "iconColor": "white", "markerColor": "cadetblue", "prefix": "fa"}
+            );
+            marker_13af31f96403d8997cb15175da35eca1.setIcon(icon_4138c9d918fed5acfd3ef4fbe091a5a5);
+        
+    
+            marker_13af31f96403d8997cb15175da35eca1.bindTooltip(
+                `<div>
+                     Central Area/Squire Park, Schools, 2410 E Cherry St, Seattle WA, 98122
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1702a0ae72b9f38587dec34af6f116ac = L.marker(
+                [47.619070004, -122.34732804],
+                {"tags": ["Medium Risk", "Office"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_d8b55744529666c988327c9859bd7cbd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_1702a0ae72b9f38587dec34af6f116ac.setIcon(icon_d8b55744529666c988327c9859bd7cbd);
+        
+    
+            marker_1702a0ae72b9f38587dec34af6f116ac.bindTooltip(
+                `<div>
+                     Cascade/Eastlake, Office, 112 5th Ave N, Seattle WA, 98109
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7bd41a24a8c82949507c472ff31b88fc = L.marker(
+                [47.642588996, -122.323957031],
+                {"tags": ["Critical Risk", "Schools"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_8b6ef0e4f4b9111fdc5e1a526c4c4e44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "school", "iconColor": "white", "markerColor": "cadetblue", "prefix": "fa"}
+            );
+            marker_7bd41a24a8c82949507c472ff31b88fc.setIcon(icon_8b6ef0e4f4b9111fdc5e1a526c4c4e44);
+        
+    
+            marker_7bd41a24a8c82949507c472ff31b88fc.bindTooltip(
+                `<div>
+                     Montlake/Portage Bay, Schools, 2515 Boylston Ave E, Seattle WA, 98102
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_328fd6f81fd23337c3c63c40394d32b7 = L.marker(
+                [47.635431982, -122.37059503],
+                {"tags": ["Medium Risk", "Office"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_9de56691a48e8403bb847c3e9a0647c3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_328fd6f81fd23337c3c63c40394d32b7.setIcon(icon_9de56691a48e8403bb847c3e9a0647c3);
+        
+    
+            marker_328fd6f81fd23337c3c63c40394d32b7.bindTooltip(
+                `<div>
+                     Queen Anne, Office, 1821 10th Ave W, Seattle WA, 98119
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_335033b03930f9c05feefbac72aeac14 = L.marker(
+                [47.622236981, -122.312342982],
+                {"tags": ["Medium Risk", "Office"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_fae7a45629ace4a5e01257179024191b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "briefcase", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_335033b03930f9c05feefbac72aeac14.setIcon(icon_fae7a45629ace4a5e01257179024191b);
+        
+    
+            marker_335033b03930f9c05feefbac72aeac14.bindTooltip(
+                `<div>
+                     Miller Park, Office, 400 15th Ave E, Seattle WA, 98112
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f5e7220247725abcba45ebe9a438f666 = L.marker(
+                [47.611271985, -122.289812007],
+                {"tags": ["Medium Risk", "Government"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_5dd8bf1f256714414262b54ac7ce4a66 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "building-columns", "iconColor": "white", "markerColor": "lightgray", "prefix": "fa"}
+            );
+            marker_f5e7220247725abcba45ebe9a438f666.setIcon(icon_5dd8bf1f256714414262b54ac7ce4a66);
+        
+    
+            marker_f5e7220247725abcba45ebe9a438f666.bindTooltip(
+                `<div>
+                     Madrona/Leschi, Government, 917 34th Ave, Seattle WA, 98122
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a8afbc1e7f723ba81ef3d968d8660e60 = L.marker(
+                [47.599456016, -122.312426969],
+                {"tags": ["Medium Risk", "Industrial"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_219ed93ef3ad16433ce6c4d817ab22b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_a8afbc1e7f723ba81ef3d968d8660e60.setIcon(icon_219ed93ef3ad16433ce6c4d817ab22b5);
+        
+    
+            marker_a8afbc1e7f723ba81ef3d968d8660e60.bindTooltip(
+                `<div>
+                     Judkins Park, Industrial, 1432 S Jackson St, Seattle WA, 98144
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c97c175581ceb30735024ae4c5b78098 = L.marker(
+                [47.567676994, -122.324491042],
+                {"tags": ["Medium Risk", "Industrial"]}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var icon_d633f6d8b5f502f6ad2ef0036484891e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "industry", "iconColor": "white", "markerColor": "darkgreen", "prefix": "fa"}
+            );
+            marker_c97c175581ceb30735024ae4c5b78098.setIcon(icon_d633f6d8b5f502f6ad2ef0036484891e);
+        
+    
+            marker_c97c175581ceb30735024ae4c5b78098.bindTooltip(
+                `<div>
+                     Duwamish/SODO, Industrial, 4025 7th Ave S, Seattle WA, 98108
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var tag_filter_button_165b5dbdadfaf11539f7aedc5300612e = L.control.tagFilterButton(
+                {"clearText": "clear", "data": ["Medium Risk", "High Risk", "Critical Risk"], "filterOnEveryClick": true, "icon": "fa-filter", "openPopupOnHover": false, "position": "topright"}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var tag_filter_button_7dec83bdf36db363108f2ba0eef126b9 = L.control.tagFilterButton(
+                {"clearText": "clear", "data": ["Schools", "Office", "Government", "Industry"], "filterOnEveryClick": true, "icon": "fa-filter", "openPopupOnHover": false, "position": "topright"}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topright", "title": "Fullscreen Mode", "titleCancel": "Exit Fullscreen"}
+            ).addTo(map_5d6cca48672de7936e195e5522ac702b);
+        
+    
+            var heat_map_7a694df709ccc01c8a57889633adc6f4 = L.heatLayer(
+                [[47.547116982, -122.387467968], [47.626332002, -122.339395994], [47.627850006, -122.356310004], [47.602845993, -122.334087986], [47.611597999, -122.340147012], [47.607671999, -122.325891993], [47.621036986, -122.326961021], [47.600383012, -122.335145028], [47.625755997, -122.345964975], [47.618596008, -122.31783799], [47.597853019, -122.324696985], [47.66287601, -122.379437016], [47.606310988, -122.330515032], [47.668286989, -122.298831019], [47.623332999, -122.313321988], [47.622171979, -122.312936002], [47.619494003, -122.355013994], [47.618058015, -122.353051036], [47.618340988, -122.334677988], [47.668953979, -122.386399024]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            );
+        
+    
+                heat_map_7a694df709ccc01c8a57889633adc6f4.addTo(map_5d6cca48672de7936e195e5522ac702b);
+</script>
+</html>
