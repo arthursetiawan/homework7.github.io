@@ -45,7 +45,7 @@
     <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
 </head>
 <body>
-    
+            <h1>Unreinforced Masonry Buildings in Seattle with Commercial / Residential Building Heatmap</h1>
     
             <div class="folium-map" id="map_a63d41356d205f6c6bb1620547d3fea8" ></div>
         
@@ -1100,4 +1100,11 @@
     
                 heat_map_a1a536c00e9267e49b88726919cb1f88.addTo(map_a63d41356d205f6c6bb1620547d3fea8);
 </script>
+
+<body>
+    <p>Description:</p>
+    <p>This dataset represents the list of known unreinforced masonry buildings within the Seattle City limits from the Seattle Open Data portal. The question I am trying to answer is what buildings are at risk of requiring masonry reinforcement based on government standards. What I have found is that all 70 schools int his dataset have a critical risk type associated to them. I am highlighting Schools, Government, Industrial, and Office buildings as places of interest as they hold a typically large number of individuals and potentially have higher risk if the building is not reinforced, which have been represented as icons. This is paired with a heatmap plugin which shows frequency of both commercial and residential buildings that have medium, high, or critical risk. 
+
+We can see what areas of Seattle have higher number of commercial or residential buildings in need of further inspection, namely Downtown Seattle, Uptown, and Capitol Hill. The color encodings of the icons here were selected intentionally, where industrial buildings is represented in green, gray for the government buildings, and purple for office buildings. I included tooltips for each icon, showing the neighborhood the building is located in, it's building use type, address, city, state, and zip code. I initially attempted to include a dual map visual to show commercial and residential buildings, but since there are a lot of datapoints I resorted to utilizing a heatmap instead. Furthermore, I included the use of two filters, one for risk categories, and the other for our building types. The use of icons with tooltips here is both expressive and effective because it highlights important buildings of interest as well. I further included the fullscreen plugin as well to allow the user to view the map fully. Note that we are taking a smaller sample of buildings of interest to not overcrowd the map. I attempted a cluster with this as well but decided against it since filtering does not work well with clustering.</p>
+</body>
 </html>
